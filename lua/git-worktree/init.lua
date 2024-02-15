@@ -445,7 +445,7 @@ M.delete_worktree = function(path, force, opts)
 
     status:reset(3)
 
-    emit_before_change(Enum.Operations.Delete, { path = vim.loop.cwd() })
+    emit_before_change(Enum.Operations.Delete, { path = path })
 
     M.setup_git_info()
     has_worktree(path, function(found)
